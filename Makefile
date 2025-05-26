@@ -20,4 +20,8 @@ expand:
 	sudo docker compose exec php composer install
 	sudo docker compose exec php php artisan key:generate
 	sudo docker compose exec php php artisan config:cache
+	sudo docker compose exec php php artisan orchid:install
 	make migrate
+
+admin:
+	sudo docker compose exec php php artisan orchid:admin
