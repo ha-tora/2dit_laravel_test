@@ -12,6 +12,8 @@ use App\Orchid\Screens\Examples\ExampleLayoutsScreen;
 use App\Orchid\Screens\Examples\ExampleScreen;
 use App\Orchid\Screens\Examples\ExampleTextEditorsScreen;
 use App\Orchid\Screens\PlatformScreen;
+use App\Orchid\Screens\ProductEditScreen;
+use App\Orchid\Screens\ProductListScreen;
 use App\Orchid\Screens\Role\RoleEditScreen;
 use App\Orchid\Screens\Role\RoleListScreen;
 use App\Orchid\Screens\User\UserEditScreen;
@@ -83,6 +85,17 @@ Route::screen('roles', RoleListScreen::class)
     ->breadcrumbs(fn (Trail $trail) => $trail
         ->parent('platform.index')
         ->push(__('Roles'), route('platform.systems.roles')));
+
+
+// Platform > Product > List
+
+Route::screen('products', ProductListScreen::class)
+    ->name('platform.product.list');
+
+// Platform > Product > Edit
+
+Route::screen('product/{product?}', ProductEditScreen::class)
+    ->name('platform.product.edit');
 
 // Example...
 Route::screen('example', ExampleScreen::class)
