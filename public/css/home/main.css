@@ -11,21 +11,21 @@
 /* stylelint-disable */
 @font-face {
   font-family: "Geometria";
-  src: url("../fonts//Geometria-Regular.woff2");
+  src: url("/fonts/Geometria-Regular.woff2");
   font-weight: 400;
   font-display: block;
   font-style: normal;
 }
 @font-face {
   font-family: "Geometria";
-  src: url("../fonts//Geometria-Medium.woff2");
+  src: url("/fonts/Geometria-Medium.woff2");
   font-weight: 500;
   font-display: block;
   font-style: normal;
 }
 @font-face {
   font-family: "Geometria";
-  src: url("../fonts//Geometria-Bold.woff2");
+  src: url("/fonts/Geometria-Bold.woff2");
   font-weight: 700;
   font-display: block;
   font-style: normal;
