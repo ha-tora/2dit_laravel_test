@@ -89,7 +89,7 @@ class ProductEditScreen extends Screen
 					->placeholder('Brief description for preview'),
 
 				Cropper::make('product.image')
-                	->targetRelativeUrl()
+                	->targetUrl()
                 	->title('Large web banner image, generally in the front and center')
                 	->width(500)
                 	->height(500),
