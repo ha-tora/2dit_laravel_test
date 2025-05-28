@@ -42,80 +42,35 @@
         </div>
       </section>
 
-      <section class="products-list">
-        <section class="products-item section-to-animate visible">
-          <div class="container">
-              <div class="products-item__box">
-                <div class="products-item__image">
-                  <img src="/storage/products/product-1.png" alt="">
+        @foreach ($products as $product)
+          <section class="products-item section-to-animate visible">
+            <div class="container">
+                @if ($loop->index % 2)
+                <div class="products-item__box products-item__box_reverse">
+                @else
+                <div class="products-item__box">
+                @endif
+                  <div class="products-item__image">
+                    <img src="{{ $product->image }}" alt="">
+                  </div>
+    
+                  <div class="products-item__content">
+                    <div class="products-item__content-title">{{ $product->name }}</div>
+                    <div class="products-item__content-description">{{ $product->title }}</div>
+                    <div class="products-item__content-line"></div>
+                    <div class="products-item__content-text">{{ $product->comment }}</div>
+                    <a href="https://karfidov.2dit-dev.ru/#" class="products-item__content-link">
+                      <span>Узнать </span>подробнее
+                      <svg width="27" height="8" viewBox="0 0 27 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M26.3536 4.35355C26.5488 4.15829 26.5488 3.84171 26.3536 3.64645L23.1716 0.464466C22.9763 0.269204 22.6597 0.269204 22.4645 0.464466C22.2692 0.659728 22.2692 0.976311 22.4645 1.17157L25.2929 4L22.4645 6.82843C22.2692 7.02369 22.2692 7.34027 22.4645 7.53553C22.6597 7.7308 22.9763 7.7308 23.1716 7.53553L26.3536 4.35355ZM0 4.5H26V3.5H0V4.5Z" fill="white"></path>
+                      </svg>
+                    </a>
+                    <button class="btn-reset products-btn products-item__content-btn js-products-modal-open" data-modal="products-order">Заказать</button>
+                  </div>
                 </div>
-  
-                <div class="products-item__content">
-                  <div class="products-item__content-title">Комарик</div>
-                  <div class="products-item__content-description">универсальный пистолет для уколов</div>
-                  <div class="products-item__content-line"></div>
-                  <div class="products-item__content-text">Персональный автоинъектор для быстрого, безопасного и безболезненного выполнения внутримышечных и подкожных инъекций в домашних условиях.</div>
-                  <a href="https://karfidov.2dit-dev.ru/#" class="products-item__content-link">
-                    <span>Узнать </span>подробнее
-                    <svg width="27" height="8" viewBox="0 0 27 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M26.3536 4.35355C26.5488 4.15829 26.5488 3.84171 26.3536 3.64645L23.1716 0.464466C22.9763 0.269204 22.6597 0.269204 22.4645 0.464466C22.2692 0.659728 22.2692 0.976311 22.4645 1.17157L25.2929 4L22.4645 6.82843C22.2692 7.02369 22.2692 7.34027 22.4645 7.53553C22.6597 7.7308 22.9763 7.7308 23.1716 7.53553L26.3536 4.35355ZM0 4.5H26V3.5H0V4.5Z" fill="white"></path>
-                    </svg>
-                      
-                  </a>
-                  <button class="btn-reset products-btn products-item__content-btn js-products-modal-open" data-modal="products-order">Заказать</button>
-                </div>
-              </div>
-          </div>
-        </section>
-  
-        <section class="products-item section-to-animate visible">
-          <div class="container">
-              <div class="products-item__box products-item__box_reverse">
-                <div class="products-item__image">
-                  <img src="/storage/products/product-2.png" alt="">
-                </div>
-  
-                <div class="products-item__content">
-                  <div class="products-item__content-title">Моторчики</div>
-                  <div class="products-item__content-description">универсальный пистолет для уколов</div>
-                  <div class="products-item__content-line"></div>
-                  <div class="products-item__content-text">Персональный автоинъектор для быстрого, безопасного и безболезненного выполнения внутримышечных и подкожных инъекций в домашних условиях.</div>
-                  <a href="https://karfidov.2dit-dev.ru/#" class="products-item__content-link">
-                    <span>Узнать </span>подробнее
-                    <svg width="27" height="8" viewBox="0 0 27 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M26.3536 4.35355C26.5488 4.15829 26.5488 3.84171 26.3536 3.64645L23.1716 0.464466C22.9763 0.269204 22.6597 0.269204 22.4645 0.464466C22.2692 0.659728 22.2692 0.976311 22.4645 1.17157L25.2929 4L22.4645 6.82843C22.2692 7.02369 22.2692 7.34027 22.4645 7.53553C22.6597 7.7308 22.9763 7.7308 23.1716 7.53553L26.3536 4.35355ZM0 4.5H26V3.5H0V4.5Z" fill="white"></path>
-                    </svg>
-                  </a>
-                  <button class="btn-reset products-btn products-item__content-btn js-products-modal-open" data-modal="products-order">Заказать</button>
-                </div>
-              </div>
-          </div>
-        </section>
-  
-        <section class="products-item section-to-animate visible">
-          <div class="container">
-              <div class="products-item__box">
-                <div class="products-item__image">
-                  <img src="/storage/products/product-3.png" alt="">
-                </div>
-  
-                <div class="products-item__content">
-                  <div class="products-item__content-title">Датчики</div>
-                  <div class="products-item__content-description">универсальный пистолет для уколов</div>
-                  <div class="products-item__content-line"></div>
-                  <div class="products-item__content-text">Персональный автоинъектор для быстрого, безопасного и безболезненного выполнения внутримышечных и подкожных инъекций в домашних условиях.</div>
-                  <a href="https://karfidov.2dit-dev.ru/#" class="products-item__content-link">
-                    <span>Узнать </span>подробнее
-                    <svg width="27" height="8" viewBox="0 0 27 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M26.3536 4.35355C26.5488 4.15829 26.5488 3.84171 26.3536 3.64645L23.1716 0.464466C22.9763 0.269204 22.6597 0.269204 22.4645 0.464466C22.2692 0.659728 22.2692 0.976311 22.4645 1.17157L25.2929 4L22.4645 6.82843C22.2692 7.02369 22.2692 7.34027 22.4645 7.53553C22.6597 7.7308 22.9763 7.7308 23.1716 7.53553L26.3536 4.35355ZM0 4.5H26V3.5H0V4.5Z" fill="white"></path>
-                    </svg>
-                      
-                  </a>
-                  <button class="btn-reset products-btn products-item__content-btn js-products-modal-open" data-modal="products-order">Заказать</button>
-                </div>
-              </div>
-          </div>
-        </section>
+            </div>
+          </section>
+        @endforeach
       </section>
 
       <section class="products-order section-to-animate visible">
@@ -180,13 +135,9 @@
                     </div>
                     <input name="products-select" class="select__value" type="text" readonly="readonly" placeholder="Выберите из списка">
                     <div class="select__list">
-                      <div data-value="1" class="select__option">1</div>
-                      <div data-value="2" class="select__option">2</div>
-                      <div data-value="3" class="select__option">3</div>
-                      <div data-value="4" class="select__option">4</div>
-                      <div data-value="5" class="select__option">5</div>
-                      <div data-value="6" class="select__option">6</div>
-                      <div data-value="7" class="select__option">7</div>
+                      @foreach ($products as $product)
+                        <div data-value="1" class="select__option">{{ $product->name }}</div>
+                      @endforeach
                     </div>
                 </div>
 
