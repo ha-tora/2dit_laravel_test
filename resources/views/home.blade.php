@@ -58,7 +58,7 @@
                     <div class="products-item__content-title">{{ $product->name }}</div>
                     <div class="products-item__content-description">{{ $product->title }}</div>
                     <div class="products-item__content-line"></div>
-                    <div class="products-item__content-text">{{ $product->comment }}</div>
+                    <div class="products-item__content-text">{{ $product->description }}</div>
                     <a href="https://karfidov.2dit-dev.ru/#" class="products-item__content-link">
                       <span>Узнать </span>подробнее
                       <svg width="27" height="8" viewBox="0 0 27 8" fill="none" xmlns="http://www.w3.org/2000/svg">
